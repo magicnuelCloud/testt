@@ -1,0 +1,188 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 40px 16px;
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2b2433;
+    background: #efeaf5;
+}
+
+/* ===== Kartu halaman ===== */
+.halaman {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(60, 30, 90, 0.15);
+}
+
+.header {
+    padding: 34px 38px 28px;
+    background: #3e2457;
+    color: #ffffff;
+    border-bottom: 5px solid #f2a93b;
+}
+
+h1 {
+    margin: 0 0 6px;
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+.pengantar { margin: 0; font-size: 0.95em; color: #dccdea; }
+
+form { padding: 10px 38px 38px; }
+
+/* ===== Bagian form ===== */
+.bagian {
+    margin-top: 26px;
+    padding: 4px 22px 10px;
+    background: #faf8fc;
+    border: 1.5px solid #e1d8ea;
+    border-left: 6px solid #3e2457;
+    border-radius: 10px;
+}
+
+h2 {
+    margin: 14px 0 0;
+    font-size: 1.15em;
+    color: #3e2457;
+}
+
+/* ===== Tabel ===== */
+.tabel-form {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.tabel-form td { padding: 0; vertical-align: middle; }
+
+.kolom-label {
+    width: 34%;
+    padding-right: 16px !important;
+    font-weight: 600;
+    color: #3e2457;
+}
+
+.kolom-label label { font-weight: 600; cursor: pointer; }
+.atas { vertical-align: top !important; padding-top: 8px !important; }
+
+/* ===== Input ===== */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 1em;
+    color: #2b2433;
+    background: #ffffff;
+    border: 1.5px solid #c6b9d4;
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea { resize: vertical; min-height: 120px; }
+
+input[type="text"]:hover,
+select:hover,
+textarea:hover { border-color: #8b72a3; }
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #f2a93b;
+    box-shadow: 0 0 0 3px rgba(242, 169, 59, 0.3);
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    font-family: inherit;
+    background: #ffffff;
+    border: 1.5px dashed #a893bd;
+    border-radius: 8px;
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 6px 14px;
+    font-family: inherit;
+    color: #ffffff;
+    background: #3e2457;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== Radio & checkbox ===== */
+input[type="radio"],
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+    accent-color: #3e2457;
+    cursor: pointer;
+}
+
+label.pilihan {
+    display: inline-block;
+    margin-right: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input:focus-visible { outline: 2px solid #f2a93b; outline-offset: 2px; }
+
+.kotak-pilihan {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1.5px solid #e1d8ea;
+    border-radius: 8px;
+}
+
+.kotak-pilihan:last-child { margin-bottom: 0; }
+.kotak-pilihan:hover { border-color: #8b72a3; }
+
+/* ===== Tombol ===== */
+.aksi { margin-top: 28px; text-align: center; }
+
+input[type="submit"] {
+    padding: 13px 48px;
+    font-family: inherit;
+    font-size: 1.05em;
+    font-weight: 700;
+    color: #3e2457;
+    background: #f2a93b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+input[type="submit"]:hover { background: #e39a28; }
+input[type="submit"]:active { transform: translateY(1px); }
+
+/* ===== Responsif ===== */
+@media (max-width: 600px) {
+    body { padding: 0; }
+    .halaman { border-radius: 0; }
+    .header, form { padding-left: 18px; padding-right: 18px; }
+    .bagian { padding: 4px 14px 10px; }
+
+    .tabel-form,
+    .tabel-form tbody,
+    .tabel-form tr,
+    .tabel-form td { display: block; width: 100%; }
+
+    .tabel-form tr { margin-bottom: 14px; }
+    .kolom-label { width: 100%; padding: 0 0 6px !important; }
+}
